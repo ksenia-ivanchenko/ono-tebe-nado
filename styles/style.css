@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth; /* плавная прокрутка к якорю */
   line-height: 1.35;
@@ -187,10 +192,10 @@ html {
 }
 
 .card {
-  display: flex;                    /* делаем карточку флекс контейнером */
-  flex-direction: column;           /* поворачиваем направление элементов */
-  justify-content: space-between;   /* и прижимаем к верху и низу */
-  height: 100%;    /* иначе контейнер занимает не все пространство карточки */
+  display: flex; /* делаем карточку флекс контейнером */
+  flex-direction: column; /* поворачиваем направление элементов */
+  justify-content: space-between; /* и прижимаем к верху и низу */
+  height: 100%; /* иначе контейнер занимает не все пространство карточки */
   padding: 50px 40px;
   color: #fff;
   line-height: 1.2;
@@ -258,7 +263,7 @@ html {
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: 30px;                /* раздвигаем абзацы */
+  gap: 30px; /* раздвигаем абзацы */
   font-size: 20px;
 }
 
