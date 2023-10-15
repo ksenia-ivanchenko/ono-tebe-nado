@@ -1,1 +1,292 @@
-/* место для вашего кода */
+html {
+  scroll-behavior: smooth; /* плавная прокрутка к якорю */
+  line-height: 1.35;
+}
+
+.header {
+  height: 293px;
+  padding: 93px 52px;
+  font-size: 18px;
+}
+
+.header__flex-container {
+  /* флекс контейнер для меню и адреса */
+  display: flex;
+  justify-content: space-between; /* прижали к краям */
+  align-items: center;
+  height: 105px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 28px;
+  margin-right: 209px;
+  list-style: circle;
+}
+
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+.header__link {
+  padding-left: 4px;
+  text-decoration: underline;
+  text-underline-offset: 5px; /* изменили расстояние до подчеркивания */
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.address {
+  font-style: normal;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px; /* изменили расстояние до подчеркивания */
+  list-style-type: none;
+}
+
+.header__logo {
+  position: absolute;
+  top: 92px;
+  left: 648px;
+}
+
+.header__logo > a {
+  display: block; /* подгоняем лого по размеру и расположению */
+  width: 136px;
+  margin-left: 5px;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 0; /* чтоб перекрывал только фоновую картинку */
+  width: 100%; /* задаем оверлею размеры родителя */
+  height: 100%;
+  background-color: rgb(0 0 0 / 0.6);
+}
+
+.cover {
+  position: relative;
+  height: 757px;
+  background-image: url(../images/cover.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cover__title {
+  position: absolute; /* чтоб не прятался под оверлей + позиционирование */
+  top: 165px;
+  left: 50px;
+  width: 1340px;
+  color: #fff;
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+.aligned-text {
+  display: block; /* чтоб удобно выравнивать */
+  line-height: 1.15;
+  letter-spacing: 30px;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px; /* акцентные межбуквенные отступы */
+}
+
+.no-letter-spacing {
+  letter-spacing: 0; /* убрали отступ после О в "надо", чтобы не съезжало влево */
+}
+
+.aligned-text_center {
+  margin: 20px 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.aligned-text_right {
+  margin-right: 0;
+  line-height: 1;
+  text-align: right;
+}
+
+.cover__description {
+  position: absolute; /* чтоб не прятался под оверлей 
+  и правильно спозиционировать, тк заголовок тоже позиционируется абсолютно */
+  top: 655px;
+  left: 422px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 968px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.cover__description-text {
+  word-spacing: 17px;
+  font-size: 22px;
+}
+
+.bet-button {
+  width: 257px;
+  height: 52px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.lots {
+  height: 579px;
+  margin: 180px 50px 0px 50px;
+}
+
+.lots__heading {
+  margin-bottom: 27px;
+  margin-left: 40px;
+  font-size: 40px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.lots__card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* делаем сетку для трех карточек */
+  gap: 25px;
+  margin-bottom: 29px;
+  list-style-type: none;
+}
+
+.lots__card-list-item {
+  position: relative; /* чтоб оверлей работал */
+  width: 430px;
+  height: 450px;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-size: contain;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-size: contain;
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-size: contain;
+}
+
+.card-link {
+  text-decoration: none; /* чтоб текст в карточках не подчеркивался, тк карточки сделаны ссылками */
+}
+
+.card {
+  display: flex;                    /* делаем карточку флекс контейнером */
+  flex-direction: column;           /* поворачиваем направление элементов */
+  justify-content: space-between;   /* и прижимаем к верху и низу */
+  height: 100%;    /* иначе контейнер занимает не все пространство карточки */
+  padding: 50px 40px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.card__title {
+  z-index: 0;
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  z-index: 0;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.lots__look-more-link {
+  margin-left: 40px;
+  font-size: 20px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* создаем такую же сетку, как в секции с карточками */
+  gap: 25px;
+  width: 1340px;
+  height: 487px;
+  margin: 180px 50px 181px 50px;
+}
+
+.about__logo {
+  display: flex;
+  place-content: center; /* выравниваем белое лого внутри черного контейнера по центру */
+  justify-self: center; /* выравниваем лого по центру грид колонки */
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.about__logo-image {
+  width: 148px;
+}
+
+.about__all-text {
+  grid-column: 2/4; /* отдаем тексту две правые колонки */
+  line-height: 1.15;
+}
+
+.about__title {
+  margin-top: 102px;
+  margin-bottom: 100px;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;                /* раздвигаем абзацы */
+  font-size: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px 90px 50px;
+  font-size: 18px;
+}
+
+.footer__menu-list {
+  line-height: 1.15;
+  text-align: center;
+  list-style: none;
+}
+
+.footer__menu-link {
+  text-underline-offset: 5px; /* меняем расстояние до подчеркивания */
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 50px;
+  width: 240px;
+  height: 48px;
+  list-style: none;
+}
