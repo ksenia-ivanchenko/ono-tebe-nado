@@ -52,24 +52,27 @@ html {
 .overlay {
   position: absolute;
   z-index: 0; /* чтоб перекрывал только фоновую картинку */
-  width: 100%; /* задаем оверлею размеры родителя */
-  height: 100%;
   background-color: rgb(0 0 0 / 0.6);
 }
 
+.cover__overlay {
+  height: 757px;
+  width: 100%;
+}
+
 .cover {
-  position: relative;
+  /* position: relative; */
   height: 757px;
   background-image: url(../images/cover.jpg);
   background-position: center;
   background-size: cover;
+  padding: 165px 50px 50px 50px;
 }
 
 .cover__title {
-  position: absolute; /* чтоб не прятался под оверлей + позиционирование */
-  top: 165px;
-  left: 50px;
-  width: 1340px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   min-height: 150px;
   color: #fff;
   font-size: 100px;
@@ -82,6 +85,7 @@ html {
   display: block; /* чтоб удобно выравнивать */
   line-height: 1.15;
   letter-spacing: 30px;
+  z-index: 1;
 }
 
 .letter-spacing-extended {
@@ -99,28 +103,26 @@ html {
 }
 
 .aligned-text_right {
-  margin-right: 0;
+  /* margin-right: 0; */
   line-height: 1;
   text-align: right;
 }
 
 .cover__description {
-  position: absolute; /* чтоб не прятался под оверлей 
-  и правильно спозиционировать, тк заголовок тоже позиционируется абсолютно */
-  top: 655px;
-  left: 422px;
+  margin-top: 135px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 78px;
   align-items: center;
-  width: 968px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
 }
 
 .cover__description-text {
-  word-spacing: 17px;
+  word-spacing: 18px;
   font-size: 22px;
+  z-index: 1;
 }
 
 .bet-button {
@@ -131,11 +133,17 @@ html {
   font-size: 22px;
   text-transform: uppercase;
   background: transparent;
+  z-index: 1;
 }
 
 .lots {
   min-height: 579px;
   margin: 180px 50px 180px 50px;
+}
+
+.lots__overlay {
+  width: 100%;
+  height: 450px;
 }
 
 .lots__heading {
