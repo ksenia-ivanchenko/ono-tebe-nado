@@ -11,43 +11,32 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__flex-container">
-        <!-- добавлен флекс контейнер для адреса и меню, чтобы прижать их к краям хедера -->
-        <div class="header__menu">
-          <ul class="header__links-list">
-            <li class="header__links-list-item">
-              <a
-                href="#"
-                class="header__links-list-item_no-bullit header__link_active"
-                >главная</a
-              >
-            </li>
-            <li class="header__links-list-item">
-              <a href="#lots" class="header__link">посмотреть лоты</a>
-            </li>
-            <li class="header__links-list-item">
-              <a href="#about" class="header__link">об аукционе</a>
-            </li>
-          </ul>
-        </div>
-        <address>
-          <ul class="address">
-            <li><a href="tel:+99995555555">+9 999 555 5555</a></li>
-            <li><a href="mailto:info@sobaka.ge">info@sobaka.ge</a></li>
-            <li>наб. Принсенграхт 263-265,<br />Амстердам</li>
-          </ul>
-        </address>
-      </div>
-      <!-- отдельно от флекс контейнера добавлено лого 
-      и выровнено при помощи position: absolute -->
-      <div class="header__logo">
-        <a href="#0">
-          <img
-            src="./images/logo-black.svg"
-            alt="Логотип компании: фраза 'оно тебе надо' вписана в прямоугольник"
-          />
-        </a>
-      </div>
+      <nav class="header__menu">
+        <ul class="header__links-list">
+          <li class="header__links-list-item header__links-list-item_no-bullit">
+            <a href="#" class="header__link_active">главная</a>
+          </li>
+          <li class="header__links-list-item">
+            <a href="#lots" class="header__link">посмотреть лоты</a>
+          </li>
+          <li class="header__links-list-item">
+            <a href="#about" class="header__link">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#0" class="header__logo">
+        <img
+          src="./images/logo-black.svg"
+          alt="Логотип компании: фраза 'оно тебе надо' вписана в прямоугольник"
+        />
+      </a>
+      <address class="header__address">
+        <ul class="address">
+          <li><a href="tel:+99995555555">+9 999 555 5555</a></li>
+          <li><a href="mailto:info@sobaka.ge">info@sobaka.ge</a></li>
+          <li>наб. Принсенграхт 263-265,<br />Амстердам</li>
+        </ul>
+      </address>
     </header>
 
     <main>
@@ -78,7 +67,7 @@
       </section>
       <a name="lots"></a>
       <section class="lots">
-        <h1 class="lots__heading">Лоты</h1>
+        <h2 class="lots__heading">Лоты</h2>
         <!-- добавлен список карточек, в каждом айтеме списка 
         перед карточкой добавлен оверлей для затемнения картинки -->
         <ul class="lots__card-list">
@@ -87,9 +76,9 @@
             <!-- оверлей -->
             <a href="#" class="card-link">
               <article class="card">
-                <h2 class="card__title">
+                <h3 class="card__title">
                   Фильм режиссёра, который бросил киношколу
-                </h2>
+                </h3>
                 <p class="card__text">
                   Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
                   ставка, если бы вы не знали, что режиссёр — Пол Томас
@@ -102,9 +91,9 @@
             <div class="overlay"></div>
             <a href="#" class="card-link">
               <article class="card">
-                <h2 class="card__title">
+                <h3 class="card__title">
                   Книга, где описан один скучный день из жизни рекламного агента
-                </h2>
+                </h3>
                 <p class="card__text">
                   Объёмом почти в тысячу страниц. Иногда без знаков препинания и
                   с переходами на древнеанглийский. В ней одновременно
@@ -120,9 +109,9 @@
             <div class="overlay"></div>
             <a href="#" class="card-link">
               <article class="card">
-                <h2 class="card__title">
+                <h3 class="card__title">
                   Картина, которую повторит даже 5-летний сын маминой подруги
-                </h2>
+                </h3>
                 <p class="card__text">
                   Ну действительно, там линия, тут кружочек, а здесь и вовсе
                   что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
@@ -147,7 +136,7 @@
         <div class="about__all-text">
           <!-- добавлен общий контейнер 
           для всего текста секции, чтобы было удобно расположить текст в гридах -->
-          <h1 class="about__title">Об аукционе</h1>
+          <h2 class="about__title">Об аукционе</h2>
           <div class="about__text">
             <p>
               Здесь вы не встретите очередное пафосное собрание невероятно
